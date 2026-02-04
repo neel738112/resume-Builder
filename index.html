@@ -1,0 +1,1742 @@
+<!DOCTYPE html>
+<html dir='ltr' lang='en'>
+<head>
+</head>
+<!--Main Content-->
+<div id='primary'>
+<div class='container px-0'>
+<div class='d-lg-flex' id='main-content'>
+<div class='col-lg-8 px-3' id='main'>
+<div class='pt-8 pb-9 section' id='blog-post'><div class='widget Blog' data-version='2' id='Blog1'>
+<article class='mb-5' id='page-content'>
+<div class='entry-text text-break1 mb-6'>
+<body>
+<div class='main section' id='main'><div class='widget HTML' data-version='1' id='HTML1'>
+<div class='widget-content'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css" />
+<script src='https://use.fontawesome.com/4ecc3dbb0b.js'></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdn.bootcss.com/html2pdf.js/0.9.1/html2pdf.bundle.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.1/html2pdf.bundle.min.js"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+<style type="text/css">
+textarea::placeholder {
+  
+  font-size: 14px;
+  background: #fff;
+}
+  body {color:black;}
+  
+  
+*{font-weight:normal;}
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  height: 0;
+}
+
+.form_wrapper {
+  background: #d11e1e00;
+  width: 100%;
+  max-width:900px ;
+  box-sizing: border-box;
+  padding: 20px;
+  margin: 8% auto 0;
+  position: relative;
+  z-index: 1;
+  border-top: 3px solid  #2563eb;
+
+}
+.form_wrapper h2 {
+  font-size: 1.5em;
+  line-height: 1.5em;
+  margin: 0;
+}
+.form_wrapper .title_container {
+  text-align: center;
+  padding-bottom: 15px;
+}
+.form_wrapper h3 {
+  font-size: 1.1em;
+  font-weight: normal;
+  line-height: 1.5em;
+  margin: 0;
+}
+.form_wrapper label {
+  font-size: 12px;
+}
+.form_wrapper .row {
+  margin: 10px -15px;
+}
+.form_wrapper .row > div {
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+.form_wrapper .col_half {
+  width: 50%;
+  float: left;
+}
+.form_wrapper .input_field {
+  position: relative;
+  margin-top:3px;
+  margin-bottom: 10px;
+
+}
+
+.form_wrapper .input_field > span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #333;
+  height: 95.5%;
+  border-right: 1px solid #cccccc;
+  text-align: center;
+  width: 30px;
+}
+.form_wrapper .input_field > .career-select {
+  position:absolute;
+  left:0px;padding:5px;
+  top: 1.5px;
+  color: #333;background:#f5ba1a;
+  height: 90.5%;border:none;
+  border-right: 2px solid #111 !important;
+  text-align: center;
+  width: 50px;
+}
+.form_wrapper .input_field > button {
+  position:absolute;
+  right: 0;
+  top: 0;
+  color: #333;
+  height: 95.5%;border:none;
+  border-left: 1px solid #cccccc !important;
+  text-align: center;background:#0c0;
+  width: 30px;
+}
+.form_wrapper .input_field > button > i,.form_wrapper .input_field > span > i {
+  padding-top: 10px;
+}
+
+.form_wrapper .textarea_field > span > i {
+  padding-top: 10px;
+}
+
+#label-heading{box-sizing: border-box;
+outline: none;
+font-size:medium;
+font-weight: bold;
+}
+.form_wrapper input[type=file],.form_wrapper input[type=number],.form_wrapper textarea[type=text],.form_wrapper input[type=text], .form_wrapper input[type=email], .form_wrapper input[type=password] {
+  width: 100%;
+  padding: 8px 35px 9px 35px;
+  height: 35px;
+  border: 1px solid #cccccc;
+  box-sizing: border-box;
+  outline: none;
+}
+.form_wrapper input[type=number],.form_wrapper textarea[type=text],.form_wrapper input[type=text]:hover, .form_wrapper input[type=email]:hover, .form_wrapper input[type=password]:hover {
+  background: #fafafa;
+}
+.form_wrapper input[type=file]:focus,.form_wrapper input[type=text]:focus,.form_wrapper input[type=number]:focus,.form_wrapper textarea[type=text]:focus, .form_wrapper input[type=email]:focus, .form_wrapper input[type=password]:focus {
+  -webkit-box-shadow: #d9d9d9;
+  -moz-box-shadow: 0 0 2px 1px #d9d9d9;
+  box-shadow: 0 0 2px 1px #d9d9d9;
+  border: 1px solid #f5ba1a;
+  background: #f4ea2678;
+}
+.form_wrapper input[type=submit] {
+  background-color: #2563eb;
+  height: 35px;
+  line-height: 35px;
+  width: 100%;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: #fff;
+  font-size: 1.1em;
+  margin-bottom: 10px;
+ 
+}
+.form_wrapper input[type=submit]:hover {
+  background: #e1a70a;
+}
+.form_wrapper input[type=submit]:focus {
+  background: #e1a70a;
+}
+.form_wrapper input[type=checkbox], .form_wrapper input[type=radio] {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.form_container .row .col_half.last {
+  border-left: 1px solid #cccccc;
+}
+
+.checkbox_option label {
+  margin-right: 1em;
+  position: relative;
+}
+.checkbox_option label:before {
+  content: "";
+  display: inline-block;
+  width: 0.5em;
+  height: 0.5em;
+  margin-right: 0.5em;
+  vertical-align: -2px;
+  border: 2px solid #cccccc;
+  padding: 0.12em;
+  background-color: transparent;
+  background-clip: content-box;
+  transition: all 0.2s ease;
+}
+.checkbox_option label:after {
+  border-right: 2px solid #000000;
+  border-top: 2px solid #000000;
+  content: "";
+  height: 20px;
+  left: 2px;
+  position: absolute;
+  top: 7px;
+  transform: scaleX(-1) rotate(135deg);
+  transform-origin: left top;
+  width: 7px;
+  display: none;
+}
+.checkbox_option input:hover + label:before {
+  border-color: #000000;
+}
+.checkbox_option input:checked + label:before {
+  border-color: #000000;
+}
+.checkbox_option input:checked + label:after {
+  -moz-animation: check 0.8s ease 0s running;
+  -webkit-animation: check 0.8s ease 0s running;
+  animation: check 0.8s ease 0s running;
+  display: block;
+  width: 7px;
+  height: 20px;
+  border-color: #000000;
+}
+
+.radio_option label {
+  margin-right: 1em;
+}
+.radio_option label:before {
+  content: "";
+  display: inline-block;
+  width: 0.5em;
+  height: 0.5em;
+  margin-right: 0.5em;
+  border-radius: 100%;
+  vertical-align: -3px;
+  border: 2px solid #cccccc;
+  padding: 0.15em;
+  background-color: transparent;
+  background-clip: content-box;
+ 
+}
+.radio_option input:hover + label:before {
+  border-color: #000000;
+}
+.radio_option input:checked + label:before {
+  background-color: #000000;
+  border-color: #000000;
+}
+
+.select_option {
+  position: ;
+  width: 100%;
+}
+.input_field .career-select {
+  display: ;
+  width: 100%;text-align:left !important;
+  height:25px;
+  padding: ;
+  cursor: pointer;
+  color: #7b7b7b;
+  border: 1px solid #cccccc;
+  border-radius: 0;
+  background: #fff;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  transition: all 0.2s ease;
+}
+.career-select_arrow {display:none;
+  position: absolute;background:#fff;
+  top: calc(50% - 4px);
+  left: 10px;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+  border-width: 8px 5px 0 5px;
+  border-style: solid;
+  border-color: #7b7b7b transparent transparent transparent;
+}
+.select_option select {
+  display: inline-block;
+  width: 100%;
+  height: 35px;
+  padding: 0px 15px;
+  cursor: pointer;
+  color: #7b7b7b;
+  border: 1px solid #cccccc;
+  border-radius: 0;
+  background: #fff;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  transition: all 0.2s ease;
+}
+.select_option select::-ms-expand {
+  display: none;
+}
+.select_option select:hover, .select_option select:focus {
+  color: #000000;
+  background: #fafafa;
+  border-color: #000000;
+  outline: none;
+}
+
+.select_arrow {
+  position: absolute;
+  top: calc(50% - 4px);
+  left: 15px;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+  border-width: 8px 5px 0 5px;
+  border-style: solid;
+  border-color: #7b7b7b transparent transparent transparent;
+}
+
+.select_option select:hover + .select_arrow, .select_option select:focus + .select_arrow {
+  border-top-color: #000000;
+}
+
+.credit {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 15px;
+  color: #f5ba1a;
+}
+.credit a {
+  color: #e1a70a;
+}
+
+@-webkit-keyframes check {
+  0% {
+    height: 0;
+    width: 0;
+  }
+  25% {
+    height: 0;
+    width: 7px;
+  }
+  50% {
+    height: 20px;
+    width: 7px;
+  }
+}
+@keyframes check {
+  0% {
+    height: 0;
+    width: 0;
+  }
+  25% {
+    height: 0;
+    width: 7px;
+  }
+  50% {
+    height: 20px;
+    width: 7px;
+  }
+}
+@-webkit-keyframes expand {
+  0% {
+    -webkit-transform: scale3d(1, 0, 1);
+    opacity: 0;
+  }
+  25% {
+    -webkit-transform: scale3d(1, 1.2, 1);
+  }
+  50% {
+    -webkit-transform: scale3d(1, 0.85, 1);
+  }
+  75% {
+    -webkit-transform: scale3d(1, 1.05, 1);
+  }
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+    opacity: 1;
+  }
+}
+@keyframes expand {
+  0% {
+    -webkit-transform: scale3d(1, 0, 1);
+    transform: scale3d(1, 0, 1);
+    opacity: 0;
+  }
+  25% {
+    -webkit-transform: scale3d(1, 1.2, 1);
+    transform: scale3d(1, 1.2, 1);
+  }
+  50% {
+    -webkit-transform: scale3d(1, 0.85, 1);
+    transform: scale3d(1, 0.85, 1);
+  }
+  75% {
+    -webkit-transform: scale3d(1, 1.05, 1);
+    transform: scale3d(1, 1.05, 1);
+  }
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes bounce {
+  0% {
+    -webkit-transform: translate3d(0, -25px, 0);
+    opacity: 0;
+  }
+  25% {
+    -webkit-transform: translate3d(0, 10px, 0);
+  }
+  50% {
+    -webkit-transform: translate3d(0, -6px, 0);
+  }
+  75% {
+    -webkit-transform: translate3d(0, 2px, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+@keyframes bounce {
+  0% {
+    -webkit-transform: translate3d(0, -25px, 0);
+    transform: translate3d(0, -25px, 0);
+    opacity: 0;
+  }
+  25% {
+    -webkit-transform: translate3d(0, 10px, 0);
+    transform: translate3d(0, 10px, 0);
+  }
+  50% {
+    -webkit-transform: translate3d(0, -6px, 0);
+    transform: translate3d(0, -6px, 0);
+  }
+  75% {
+    -webkit-transform: translate3d(0, 2px, 0);
+    transform: translate3d(0, 2px, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+.dnbcbtn {
+    padding: 20px;
+    margin: 15px auto;
+    text-align: center;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Individual button styles */
+.dnbcbtn button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #ffffff;
+    background-color: #2563eb;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.dnbcbtn button:hover {
+    background-color: #1d4ed8;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Active/Click effect */
+.dnbcbtn button:active {
+    transform: translateY(1px);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Focus outline for accessibility */
+.dnbcbtn button:focus {
+    outline: 2px solid #60a5fa;
+    outline-offset: 2px;
+}
+
+/* Media query for mobile devices */
+@media screen and (max-width: 600px) {
+    .dnbcbtn button {
+        margin: 5px;
+        width: 100%;
+        display: block;
+    }
+}
+
+@media (max-width: 600px) {
+  .form_wrapper .col_half {
+    width: 100%;
+    float: none;
+  }
+
+  .bottom_row .col_half {
+    width: 50%;
+    float: left;
+  }
+
+  .form_container .row .col_half.last {
+    border-left: none;
+  }
+
+  .remember_me {
+    padding-bottom: 20px;
+  }
+}
+</style>
+<style type="text/css">
+#academic_container{
+  overflow-x:auto;
+  height: 500px;
+  width: 500px;
+  margin: ;
+}
+
+#academic_container table{
+  width:800px ;/*800px*/
+}
+
+#academic_container table td,#academic_container th{
+  padding:0;margin-bottom:0;
+  border: 1px solid black;
+}
+#academic_container table,#academic_container table td,#academic_container table th{border-collapse:;border:0.5px solid #111}
+#academic_container table tr:first-child td{padding:0;margin:0 !important;
+  border: ;
+  outline : 0;
+}
+#academic_calendar table tr td:nth-child(6) button{height:15px;padding:2px !important}
+/* Align Center */.
+#academic_container table td, #academic_container table td input {
+  text-align: center !important;padding:0;
+}
+
+#invalidMsg,#invalidMsgp,#invalidMsgextra{
+  color:red;
+}
+
+#academic_container table td input, .academic_container table td button{
+  height:;/*25px*/
+  width: 100%;
+}
+#label-heading{position: relative;
+margin-top:3px;
+margin-bottom: 10px;
+}
+
+             .rpdtl tr td:nth-child(6){display:none !important;border:none;}
+             .rpdtl table,.rpdtl td{border:1px solid #111;border-collapse:collapse;}
+
+
+ .removettt{font-weight: bold;
+ font-size: 10px;
+ background-color: red;
+ color: white;
+ padding: 2px 6px;
+ border-radius: 4px;
+ cursor: pointer;
+ 
+ }
+ .taskt {
+ margin-top:8px;
+ border-radius: 6px;
+ padding:;
+ width:95.5%;
+ }
+ .taskst .taskt {
+ background-color: white;
+ padding:5px;
+ border-radius: 6px;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ transition: 0.3s;
+ cursor: pointer;
+ border: 1px solid #ccc;
+ }
+ @media print {
+         .dnbcbtn {display:none;}
+      }
+    
+    
+    /* Photo preview box */
+#userimg_input{
+  width:140px;
+  height:170px;
+  background:#eee;
+  border:1px solid #ccc;
+  padding:6px;
+  overflow:hidden;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+/* Image control – full screen issue fix */
+#userimg_input img{
+  max-width:100%;
+  max-height:100%;
+  width:auto !important;
+  height:auto !important;
+  object-fit:cover;
+  display:block;
+    }
+ #rdiv table tbody tr td:nth-child(6){display:none !important;}
+ #rdiv table{margin-top:7px;}
+ </style>
+
+
+<div class="form_wrapper">
+  <div class="form_container">
+  
+    <div class="title_container">
+      <h2 id="document-type">Resume/CV/Biodata Form</h2> 
+    </div>
+    <div class="row clearfix">
+      <div class="">
+      <label id="label-heading">Type : </label>
+        <div class="input_field radio_option">
+        <input type="radio" value="Resume" name="radiogroup1" onclick="displayType(this.name)" id="rd1" checked />
+        <label for="rd1">Resume</label>
+        <input type="radio" value="Curriculum Vitae" name="radiogroup1" onclick="displayType(this.name)" id="rd2" />
+        <label for="rd2">Curriculum Vitae</label>
+        <input type="radio" value="Biodata" name="radiogroup1" onclick="displayType(this.name)" id="rd3" />
+        <label for="rd3">Biodata</label>
+        </div>
+       
+        
+        <label id="label-heading">Candidate Name : </label>
+        <div class="input_field"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
+        <input type="text" id="name_input" name="name" placeholder="Full Name" />
+        </div>
+        
+       
+        <label id="label-heading">Candidate Address : </label>
+        <div class="input_field"> <span><i aria-hidden="true" class="fa fa-home"></i></span>
+        <textarea style="height:100px;" type="text"id="address_input" name="name" placeholder="Address" required ></textarea>
+        </div>
+        
+        
+        <label id="label-heading">Mobile Number : </label>
+          <div class="input_field"> <span><i aria-hidden="true" class="fa fa-phone"></i></span>
+          <input type="number" id="mobile_input" name="mobile" placeholder="Mobile No." required />
+          </div>
+          <label id="label-heading">Email Address : </label>
+          <div class="input_field"> <span><i aria-hidden="true" class="fa fa-envelope"></i></span>
+            <input type="email" id="email_input" name="email" placeholder="Email" required />
+          </div>
+          <label id="label-heading">Date of Birth : </label>
+          <div class="input_field"> <span><i aria-hidden="true" class="fa fa-calendar"></i></span>
+            <input type="text" id="dob_input" name="date" placeholder="Date of Birth" required />
+          </div>
+         <!-- <div class="input_field radio_option">
+          <input type="radio" name="radiogroup2" id="rd4">
+          <label for="rd4">Male</label>
+          <input type="radio" name="radiogroup2" id="rd5">
+          <label for="rd5">Female</label>
+          </div>-->
+          <label id="label-heading">Father Name : </label>
+          <div class="input_field"> <span><i aria-hidden="true" class="fa fa-male"></i></span>
+            <input type="text" id="father_input" name="Father" placeholder="Father name" required />
+          </div>
+          <label id="label-heading">Mother Name : </label>
+          <div class="input_field"> <span><i aria-hidden="true" class="fa fa-female"></i></span>
+          <input type="text" id="mother_input" name="Mother" placeholder="Mother name" required />
+          </div>
+                <label id="label-heading">Gender : </label>
+                <div class="input_field select_option">
+                <select id="user-gender" onchange="showgender('user-gender')">
+                <option value="0" />Select gender
+                <option value="1" />Male
+                <option value="2" />Female
+                <option value="3" />Transgender
+                </select>
+                <div class="select_arrow"></div>
+                </div>
+              <label id="label-heading">Nationality : </label>
+              <div class="input_field select_option">
+                <select id="user-national" onchange="shownational(this.id)">
+                  <option value="0" />Nationality
+                  <option value="1" />India
+                  </select>
+                <div class="select_arrow"></div>
+              </div>
+              <label id="label-heading">Married Status : </label>
+              <div class="input_field select_option">
+              <select id="user-marriedstts" onchange="showmarried(this.id)">
+              <option value="0" />Marritial status
+              <option value="1" />Unmarried
+              <option value="2" />Married
+              <option value="3" />Divorced
+              </select>
+               <div class="select_arrow"></div>
+              </div>
+              <label id="label-heading">Language Known : </label>
+              <div class="input_field"> <span><i aria-hidden="true" class="fa fa-language"></i></span>
+              <input type="text"  id="language_input" name="language" placeholder="Language" required />
+              </div>
+              <label id="label-heading">Your Hobbies : </label>
+              <div class="input_field"> <span><i aria-hidden="true" class="fa fa-play"></i></span>
+              <input type="text" id="hobbies_input"  name="hobbies" placeholder="Hobbies" required />
+              
+              </div>
+              <label id="label-heading">Career Objective : </label>
+              <div align='left' class="input_field"><select id="career-select" onchange="showcareerobjective(this.id)" style="outline:none;color:" class="career-select">
+              <option value="0" />Select career objective
+              <option value="1" />Secure a responsible career opportunity to fully utilize my talent and skills to grow, while making a significant contribution to the success of the company.
+              <option value="2" />Self-motivated and hardworking fresher seeking for an opportunity to work in a challenging environment to prove my skills and utilize my knowledge & intelligence in the growth of the organization.
+              <option value="3" />Urge for a position in an aggressively growing organization where my technical & functional expertise can be effectively utilized and possess good analytical abilities, quick grasping power, zeal for learning new things and excellent communication skills.
+              <option value="4" />To seek a good & responsible job in professionally managed organization where in my conceptual and functional skills are effectively utilized in a way that contributes to the organization growth coupled with personal growth within the organization.
+              <option value="5" />To make a good position in a reputed company and work enthusiastically in team which provides steady career growth along with job satisfaction, challenges and give value contribution in the success and to build a challenging career with honesty and loyalty by translating my experience knowledge ,skills and abilities into value for an organization.
+              <option value="6" />To contribute my best to the organization irrespective of the kind of project undertaken and to utilize my skills and to perform the job to the best of my ability with the zeal and willing to learn.
+              </select><div class="career-select_arrow"></div>
+              <input style="padding-left:70px;" type="text" id="career_input" name="Career objective" placeholder="Write here OR select" required />
+              </div>
+              <label id="label-heading">Academic Qualification : </label>
+              <div style="min-height:100px;height:auto;width:100%;overflow:scroll;" class="input_field" id="academic_container">
+              <div><span id="invalidMsg"></span></div>
+              <table id="academic_details">
+              <colgroup>
+              <col style="width:20%;" />
+              <col style="width:20%;" />
+              <col style="width:20%;" />
+              <col style="width:20%;" />
+              <col style="width:20%;" />
+              </colgroup>
+              <tr style="border:none !important;">
+              <td><input type="text" placeholder="Exam Name ..." id="exam_name" autocomplete="off" /></td>
+              <td><input type="text" placeholder="Board/University Name ..." id="board_name" autocomplete="off" /></td>
+              <td><input type="text" placeholder=" Passing Year ..." id="passing_year" autocomplete="off" /></td>
+              <td><input type="text" placeholder="Score % ..." id="marks" autocomplete="off" /></td>
+              <td><input type="text" placeholder="Division ..." id="division" autocomplete="off" /></td>
+              <td><button style='height:30px;adding:0px 5px !important;' onclick="addRow();">Add</button></td>
+              </tr><tr>
+              <th>Exam Name</th>
+              <th>Board / University Name</th>
+              <th>Passing Year</th>
+              <th>Marks %</th>
+              <th>Division</th>
+              <th style="border:none;"></th>
+              </tr>
+              <tbody id="acmdtl">
+              </tbody></table>
+              </div>
+              <br /><label id="label-heading">Professional Qualification : </label>
+              <div style="min-height:100px;height:auto;width:100%;overflow:scroll;" class="input_field" id="academic_container">
+                <div><span id="invalidMsgp"></span></div>
+                <table id="academic_detailsp">
+              <colgroup>
+              <col style="width:20%;" />
+              <col style="width:20%;" />
+              <col style="width:20%;" />
+              <col style="width:20%;" />
+              <col style="width:20%;" />
+              </colgroup>
+              <tr style="border:none !important;">
+              <td><input type="text" placeholder="Exam Name ..." id="exam_namep" autocomplete="off" /></td>
+              <td><input type="text" placeholder="Board/University Name ..." id="board_namep" autocomplete="off" /></td>
+              <td><input type="text" placeholder=" Passing Year ..." id="passing_yearp" autocomplete="off" /></td>
+              <td><input type="text" placeholder="Score % ..." id="marksp" autocomplete="off" /></td>
+              <td><input type="text" placeholder="Division ..." id="divisionp" autocomplete="off" /></td>
+              <td><button onclick="addRowp();">Add</button></td>
+              </tr>
+              <tr>
+              <th>Exam Name</th>
+              <th>Board / University Name</th>
+              <th>Passing Year</th>
+              <th>Marks %</th>
+              <th>Division</th>
+              <th style="border:none;"></th>
+              </tr>
+              <tbody id="prfdtl">
+              </tbody>
+              </table>
+              </div>
+              <br />
+              <label id="label-heading">Extra Qualification : </label>
+              <div><span id="invalidMsgextra"></span></div>
+             <div id="xtr_q"> <div class="input_field"> <span><i aria-hidden="true" class="fa fa-certificate"></i></span>
+              <input style="height:"  id="extraq_input" type="text" name="Extraq" placeholder="Extra qualification"  />
+              </div></div>
+              <button style="display:block;" type="button" value="Add" onclick="addli();" class="addli"> Add</button>
+              <div class="taskst" id="res"></div>
+              <br /><label id="label-heading">Work Experience : </label>
+              <div class="input_field"> <span><i aria-hidden="true" class="fa fa-tasks"></i></span>
+              <input style="height:;" type="text" id="workexp_input"  name="Work experience" placeholder="Work experience" required />
+              </div>
+              <label id="label-heading">Upload your Photo : </label>
+              <div  class="input_field"> <span><i aria-hidden="true" class="fa fa-photo"></i></span>
+              <input type='file' name="user Image" placeholder="Candidate photo"  required="required"   onchange="readURL(this);" />
+              
+              </div>
+              <div  id="userimg_input" disabled="disabled" style="background:#eee;clear:both;border:1px solid #ccc;padding:10px;"><img alt="Candidate Photo preview" id="blah" src="https://lh3.googleusercontent.com/blogger_img_proxy/AEn0k_uBm4xSouCeXHwHfG4IxCQT8STsPmqeCTaMhRF9co0TvzkHLV_Zwig-RmwiehFYgu5JOMLmaZMwTDm6=s0-d" style="">
+              
+              </div><br />
+            <div style="display:none;" class="input_field checkbox_option">
+                <input type="checkbox" id="cb1" />
+                <label for="cb1">I agree with terms and conditions</label>
+            </div>
+            <div style="display:none;" class="input_field checkbox_option">
+                <input type="checkbox" id="cb2" />
+                <label for="cb2">I want to receive the newsletter</label>
+            </div>
+            
+          <input class="button" type="submit" onclick="finalshowpreview()" value="Generate Resume" />
+        
+      </div>
+   
+    </div>
+    
+  </div>
+  </div>
+
+  <div id="preview-document-created" style="height:auto;border:none;display:;" >
+
+<div align="center" class="dnbcbtn"id="dnbcbtn" media="screen" style="display:none;" >
+    <button onclick="finalshowpreviewback()">Edit</button>
+   <button id="download-button" onclick="createPDF()">Download Resume</button>
+   <button onclick="windowprnt()">Download PDF</button>
+ </div>
+
+  <div style="padding:5px;border:none;"  id="data-entry-created"></div> </div>
+
+
+<script type="text/javascript">
+ var  type_value="Resume";
+ var  name_value,address_value,mobile_value,email_value,dob_value,father_value,mother_value,language_value,hobbies_value,career_objectiv_value,academic_qualification_value,professional_qualification_value,extra_qualification_value,work_experience_value,user_image_value,gender_value,marritial_value,nationality_value;
+             name_value = document.getElementById("name_input");
+             address_value = document.getElementById("address_input");
+             mobile_value = document.getElementById("mobile_input");
+             email_value = document.getElementById("email_input");
+             dob_value = document.getElementById("dob_input");
+             father_value = document.getElementById("father_input");
+             mother_value = document.getElementById("mother_input");
+             language_value = document.getElementById("language_input");
+             hobbies_value = document.getElementById("hobbies_input");
+             career_value = document.getElementById("career_input");
+             academic_qualification_value = document.getElementById("acmdtl");
+             professional_qualification_value = document.getElementById("prfdtl");
+             work_experience_value = document.getElementById("workexp_input");
+             var final_formd = document.querySelector(".form_wrapper");
+             var final_form = document.querySelector(".form_container");
+             var final_container = document.getElementById("preview-document-created");
+             var final_created = document.getElementById("data-entry-created");
+             name_value = document.getElementById("name_input");
+             name_value = document.getElementById("name_input");
+             name_value = document.getElementById("name_input");
+             function showgender(slctvluess){
+             var slctgndr = document.getElementById(slctvluess);
+
+             if(slctgndr.value==0){alert("select");}
+             if(slctgndr.value==1){gender_value ="Male" ;}
+             if(slctgndr.value==2){gender_value ="Female";}
+             if(slctgndr.value==3){gender_value ="Transgender";}
+             }
+                function showmarried(slctmarried){
+                var slctvlues = document.getElementById(slctmarried);
+             if(slctvlues.value==0){alert("select");}
+             if(slctvlues.value==1){marritial_value="UnMarried";}
+             if(slctvlues.value==2){marritial_value="Married";}
+             if(slctvlues.value==3){marritial_value="Divorced";}
+             }
+             function shownational(slctnational){
+             var slctnationalv = document.getElementById(slctnational);
+             if(slctnationalv.value==0){alert("select");}
+             if(slctnationalv.value==1){nationality_value="Indian";}
+             }
+             function showcareerobjective(slctcareer){
+             var slctcareers = document.getElementById(slctcareer);
+             
+             if(slctcareers.value==0){alert("select");}
+             if(slctcareers.value==1){career_value.value ="Secure a responsible career opportunity to fully utilize my talent and skills to grow, while making a significant contribution to the success of the company.";}
+             if(slctcareers.value==2){career_value.value ="Self-motivated and hardworking fresher seeking for an opportunity to work in a challenging environment to prove my skills and utilize my knowledge & intelligence in the growth of the organization.";}
+             if(slctcareers.value==3){career_value.value ="Urge for a position in an aggressively growing organization where my technical & functional expertise can be effectively utilized and possess good analytical abilities, quick grasping power, zeal for learning new things and excellent communication skills.";}
+             if(slctcareers.value==4){career_value.value ="To seek a good & responsible job in professionally managed organization where in my conceptual and functional skills are effectively utilized in a way that contributes to the organization growth coupled with personal growth within the organization.";}
+             if(slctcareers.value==5){career_value.value ="To make a good position in a reputed company and work enthusiastically in team which provides steady career growth along with job satisfaction, challenges and give value contribution in the success and to build a challenging career with honesty and loyalty by translating my experience knowledge ,skills and abilities into value for an organization.";}
+             if(slctcareers.value==6){career_value.value ="To contribute my best to the organization irrespective of the kind of project undertaken and to utilize my skills and to perform the job to the best of my ability with the zeal and willing to learn." ;}
+             career_objectiv_value = "&nbsp;&nbsp;&#8226;&nbsp;"+career_value.value+"";alert("Your selected career objective value \n 👇👇👇👇👇👇👇👇👇 \n " +career_objectiv_value);
+             }
+         
+             
+             </script>
+             <script>
+             function displayType(tupradio) {
+             var typradio = document.getElementsByName(tupradio);
+             
+             for(i = 0; i < typradio.length; i++) {
+             if(typradio[i].checked){
+             type_value = typradio[i].value;}
+             
+             else{ }
+             }
+             }
+             function readURL(input) {
+             if (input.files && input.files[0]) {
+             var reader = new FileReader();
+             
+             reader.onload = function (e) {
+             user_image_value = e.target.result;
+            document.getElementById("blah").src=e.target.result; 
+             };
+             
+             reader.readAsDataURL(input.files[0]);
+             }
+             }
+             </script>
+             <script>
+
+  var reqs_id = 0;
+
+  function removeElement(ev) {
+    var button = ev.target;
+    var field = button.previousSibling;
+    var div = button.parentElement;
+    div.removeChild(button);
+    div.removeChild(field);
+  }
+  
+function addRow(){
+  var exam_name = document.getElementById('exam_name').value;
+  var board_name = document.getElementById('board_name').value;
+  var passing_year = document.getElementById('passing_year').value;
+  var marks = document.getElementById('marks').value;
+  var division = document.getElementById('division').value;
+  
+  if(exam_name == ""){
+    document.getElementById('invalidMsg').innerHTML = 'Please Fill Exam Name.';
+    document.getElementById('exam_name').focus();
+    return;
+  }
+  else if (board_name == ""){
+    document.getElementById('invalidMsg').innerHTML = 'Please Fill in Board/University Name.';
+    document.getElementById('board_name').focus();
+    return;
+  }
+  else if (passing_year == ""){
+  document.getElementById('invalidMsg').innerHTML = 'Please Fill in Passing Year.';
+  document.getElementById('passing_year').focus();
+  return;
+  }
+  else if (marks == ""){
+  document.getElementById('invalidMsg').innerHTML = 'Please Fill in Score %.';
+  document.getElementById('marks').focus();
+  return;
+  }
+  else if (division == ""){
+  document.getElementById('invalidMsg').innerHTML = 'Please Fill in Division.';
+  document.getElementById('division').focus();
+  return;
+  }
+  
+  else{
+    document.getElementById('invalidMsg').innerHTML = "";
+    let tablev = document.getElementById('acmdtl');
+    // Insert a row at the end of the table
+    let newRow = tablev.insertRow(-1);
+    var l = tablev.rows.length-1;
+    //Col 1 = Exam
+    tablev.rows[l].insertCell(0);
+    tablev.rows[l].cells[0].innerHTML = exam_name;
+    tablev.rows[l].cells[0].style.border="1px solid black";
+    tablev.rows[l].style.textAlign="center"
+    
+    //Col 2 = Board / University
+    tablev.rows[l].insertCell(1);
+    tablev.rows[l].cells[1].innerHTML = board_name;
+    tablev.rows[l].cells[1].style.border="1px solid black";
+    //Col 3 = Passing Year
+    tablev.rows[l].insertCell(2);
+    tablev.rows[l].cells[2].innerHTML = passing_year;
+    tablev.rows[l].cells[2].style.border="1px solid black";
+    //Col 4 = Marks%
+    tablev.rows[l].insertCell(3);
+    tablev.rows[l].cells[3].innerHTML = marks;
+    tablev.rows[l].cells[3].style.border="1px solid black";
+    //Col 5 = Division
+    tablev.rows[l].insertCell(4);
+    tablev.rows[l].cells[4].innerHTML = division;
+    tablev.rows[l].cells[4].style.border="1px solid black";
+    //Col 6 = Delete Button
+    tablev.rows[l].insertCell(5);
+    tablev.rows[l].cells[5].innerHTML = "<button type='button' class='btnDelete' onclick='delRow(this);' id='btnDelete' size='1' height='1'>Delete</button>";
+
+    //Clear input
+    document.getElementById('exam_name').value="";
+    document.getElementById('board_name').value="";
+    document.getElementById('passing_year').value="";
+    document.getElementById('marks').value="";
+    document.getElementById('division').value="";
+    document.getElementById('exam_name').focus();
+   
+  }
+  
+}
+function addRowp(){
+  var exam_namep = document.getElementById('exam_namep').value;
+  var board_namep = document.getElementById('board_namep').value;
+  var passing_yearp = document.getElementById('passing_yearp').value;
+  var marksp = document.getElementById('marksp').value;
+  var divisionp = document.getElementById('divisionp').value;
+  
+  if(exam_namep == ""){
+    document.getElementById('invalidMsgp').innerHTML = 'Please Fill Exam Name.';
+    document.getElementById('exam_namep').focus();
+    return;
+  }
+  else if (board_namep == ""){
+    document.getElementById('invalidMsgp').innerHTML = 'Please Fill in Board/University Name.';
+    document.getElementById('board_namep').focus();
+    return;
+  }
+  else if (passing_yearp == ""){
+  document.getElementById('invalidMsgp').innerHTML = 'Please Fill in Passing Year.';
+  document.getElementById('passing_yearp').focus();
+  return;
+  }
+  else if (marksp == ""){
+  document.getElementById('invalidMsgp').innerHTML = 'Please Fill in Score %.';
+  document.getElementById('marksp').focus();
+  return;
+  }
+  else if (divisionp == ""){
+  document.getElementById('invalidMsg').innerHTML = 'Please Fill in Division.';
+  document.getElementById('divisionp').focus();
+  return;
+  }
+  
+  else{
+    document.getElementById('invalidMsg').innerHTML = "";
+    let tablep = document.getElementById('prfdtl');
+    // Insert a row at the end of the table
+    let newRowp = tablep.insertRow(-1);
+    var lp = tablep.rows.length-1;
+    //Col 1 = Exam
+    tablep.rows[lp].insertCell(0);
+    tablep.rows[lp].cells[0].innerHTML = exam_namep;
+    tablep.rows[lp].cells[0].style.border="1px solid black";
+   tablep.rows[lp].style.textAlign="center";
+   
+    //Col 2 = Board / University
+    tablep.rows[lp].insertCell(1);
+    tablep.rows[lp].cells[1].innerHTML = board_namep;
+    tablep.rows[lp].cells[1].style.border="1px solid black";
+    //Col 3 = Passing Year
+    tablep.rows[lp].insertCell(2);
+    tablep.rows[lp].cells[2].innerHTML = passing_yearp;
+    tablep.rows[lp].cells[2].style.border="1px solid black";
+    //Col 4 = Marks%
+    tablep.rows[lp].insertCell(3);
+    tablep.rows[lp].cells[3].innerHTML = marksp;
+    tablep.rows[lp].cells[3].style.border="1px solid black";
+    //Col 5 = Division
+    tablep.rows[lp].insertCell(4);
+    tablep.rows[lp].cells[4].innerHTML = divisionp;
+    tablep.rows[lp].cells[4].style.border="1px solid black";
+    //Col 6 = Delete Button
+    tablep.rows[lp].insertCell(5);
+    tablep.rows[lp].cells[5].innerHTML = "<button type='button' class='btnDelete' onclick='delRow(this);' id='btnDelete' size='1' height='1'>Delete</button>";
+
+    //Clear input
+    document.getElementById('exam_namep').value="";
+    document.getElementById('board_namep').value="";
+    document.getElementById('passing_yearp').value="";
+    document.getElementById('marksp').value="";
+    document.getElementById('divisionp').value="";
+    document.getElementById('exam_namep').focus();
+  }
+  
+}
+function delRow(btn){
+  var row = btn.parentNode.parentNode;
+  row.parentNode.removeChild(row);}
+function windowprnt(){
+  document.getElementById("dnbcbtn").style.display="none";
+window.print();
+document.getElementById("dnbcbtn").style.display="block";
+}
+  function finalshowpreviewback(){
+             final_form.style.display="block";
+             final_formd.style.display="block";
+             final_container.style.display = "none";
+             document.getElementById("dnbcbtn").style.display="none";
+             togglesp("removettt","block");
+             
+             }
+          
+function finalshowpreview(){
+
+ togglesp("removettt","none");
+  document.querySelector(".form_wrapper").style.maxWidth="900px";
+ extra_qualification_value=document.getElementById("res").innerHTML;
+ final_formd.style.display="none";
+ final_form.style.display="none";
+             final_container.style.display = "block";
+           document.getElementById("dnbcbtn").style.display="block";
+             
+             if(professional_qualification_value.textContent.length>15 && extra_qualification_value.length >0){
+              
+           document.getElementById("data-entry-created").innerHTML =`
+           <div sstyle="padding-left:20px;" align='center'><div align='left'  style="padding:20px;width:650px;background-color:#fff;border:.5px solid #000000;margin-top:0px;" id="rdiv">
+    <div id="main" style="width:100%;padding:0px 20px 0px;">
+    <div style="text-align:center;width:100%;">
+    <span style="font-size:25px;font-weight:bold;"><u>${type_value}</u></span>
+    </div>
+    <div style="width:50%;float:left;">
+    <p><span style="font-size:16px;font-weight:bold">${name_value.value}</span><br><b>${address_value.value}<br><b>Contact No.: </b>${mobile_value.value}<br><b>Email id: </b>${email_value.value}</p>
+    </div>
+    <div style="text-align:center;width:20%;float:right;">
+     <div style="border:none;height:120px;width:110px;">
+    <img src="${user_image_value}" height="118px;" width="108px">
+    </div>
+    </div>
+    </div>
+    <div style="border-top:2px dotted #111;clear:both">
+   <br>
+    <div style="border-bottom:2px solid #111;width: 100%;  margin-top: 0px;" class="head">
+    <span style="font-size:16px;font-weight:bold;">Career Objective</span>
+    </div>
+    <div style="width:100%;margin-top:2px;margin-bottom:5px;">
+    <p id='skr' style="margin-left:17px;text-indent:-17px">${career_objectiv_value}</p>
+    </div>
+    <div style="border-bottom:2px solid #111;width: 100%; " class="head">
+    <span style="font-size:16px;font-weight:bold;">Academic Qualification</span>
+    </div>
+    <div style="width:100%;margin-top:2px;"><table style="width: 100%;;border-collapse: collapse;border: 1px solid black;padding:10px;font-size:12px;">
+    <tbody><tr>
+    <td align="center" style="border: 1px solid black;"><b>Exam Name</b></td>
+    <td align="center" style="border: 1px solid black;"><b>Board / University</b></td>
+    <td align="center" style="border: 1px solid black;"><b>Passing year</b></td>
+    <td align="center" style="border: 1px solid black;"><b>Percentage of Marks</b></td>
+    <td align="center" style="border: 1px solid black;"><b>Division</b></td>
+    </tr>
+    ${academic_qualification_value.innerHTML}
+    </tbody></table>
+    </div>
+    <div style="border-bottom:2px solid #111;width: 100%;  margin-top: 4px;" class="head">
+    <span style="font-size:16px;font-weight:bold;">Professional Qualification</span>
+    </div>
+    <div style="width:100%;margin-top:2px;"><table style="width: 100%;; border-collapse: collapse;border: 1px solid black;padding:10px;font-size:12px;">
+    <tbody><tr>
+    <td align="center" style="border: 1px solid black;"><b>Exam Name</b></td>
+    <td align="center" style="border: 1px solid black;"><b>Board / University</b></td>
+    <td align="center" style="border: 1px solid black;"><b>Passing year</b></td>
+    <td align="center" style="border: 1px solid black;"><b>Percentage of Marks</b></td>
+    <td align="center" style="border: 1px solid black;"><b>Division</b></td>
+    </tr>
+    ${professional_qualification_value.innerHTML}
+    </tbody></table></div>
+    <div style="border-bottom:2px solid #111;width: 100%;  margin-top: 4px; margin-bottom: -4px;" class="head">
+        <span style="font-size:16px;font-weight:bold;">Extra Qualification</span>
+        </div>
+        <div style="width:100%;margin-top:2px;">
+        <p style="margin-top:7px;">${extra_qualification_value}</p>
+        </div>
+    <div style="border-bottom:2px solid #111;width: 100%;  margin-top: 4px; margin-bottom: -4px;" class="head">
+    <span style="font-size:16px;font-weight:bold;">Work Experience</span>
+    </div>
+    <div style="width:100%;margin-top:2px;">
+    <p style="margin-top:0px;">${work_experience_value.value}<br>
+    </p>
+    </div>
+    <div style="border-bottom:2px solid #111;width: 100%;  margin-top: 10px;" class="head">
+    <span style="font-size:16px;font-weight:bold;">Personal Information</span>
+    </div>
+    <div style="width:100%;">
+    <table style="margin-left:50px;width:500px;margin-top:0px;">
+    <tbody><tr>
+    <td style="width:150px">Date of Birth</td>
+    <td style="width:100px">:</td>
+    <td style="width:250px">${dob_value.value}</td>
+    </tr>
+    <tr>
+    <td style="width:150px">Father's Name</td>
+    <td style="width:100px">:</td>
+    <td style="width:250px">Mr. ${father_value.value}</td>
+    </tr>
+    <tr>
+    <td style="width:150px">Mother's Name</td>
+    <td style="width:100px">:</td>
+    <td style="width:250px">Mrs. ${mother_value.value}</td>
+    </tr>
+    <tr>
+    <td style="width:150px">Nationality</td>
+    <td style="width:100px">:</td>
+    <td style="width:250px">${nationality_value}</td>
+    </tr>
+    <tr>
+    <td style="width:150px">Gender</td>
+    <td style="width:100px">:</td>
+    <td style="width:250px">${gender_value}</td>
+    </tr>
+    <tr>
+    <td style="width:150px">Marital Status</td>
+    <td style="width:100px">:</td>
+    <td style="width:250px">${marritial_value}</td>
+    </tr>
+    <tr>
+    <td style="width:150px">Language</td>
+    <td style="width:100px">:</td>
+    <td style="width:250px">${language_value.value}</td>
+    </tr>
+    <tr>
+    <td style="width:150px">Hobbies</td>
+    <td style="width:100px">:</td>
+    <td style="width:250px">${hobbies_value.value}</td>
+    </tr>
+    </tbody></table>
+    </div>
+   
+    <br><div style="width: 100%; " class="head">
+      <span style="font-size:16px;font-weight:bold;"><u>Declaration:</u></span>
+      I hereby declare that all the statement made in this resume are true, complete and correct to the Knowledge.
+   
+      </div>
+    <div style="width:100%; margin-top:5px;margin-right: 10px;">
+    <p><span style="font-size:14px;font-weight:bold;"><i>Date:</i></span> <span style="font-size:14px;font-weight:bold;float:right;"><i>(${name_value.value})</i>
+    </span></p>
+    <p><span style="font-size:14px;font-weight:bold;"><i>Place:</i></span></p>
+    </div>
+    </div>
+    </div></div>
+            `;}
+             else if(professional_qualification_value.innerHTML.length === 15 && extra_qualification_value.length===0){
+             
+             document.getElementById("data-entry-created").innerHTML =`
+             <div sstyle="padding-left:20px;" align='center'><div align='left'  style="padding:20px;width:650px;background-color:#fff;border:.5px solid #000000;margin-top:0px;" id="rdiv">
+    <div id="main" style="width:100%;padding:0px 20px 0px;">
+    <div style="text-align:center;width:100%;">
+    <span style="font-size:25px;font-weight:bold;"><u>${type_value}</u></span>
+    </div>
+    <div style="width:50%;float:left;">
+    <p><span style="font-size:16px;font-weight:bold">${name_value.value}</span><br><b>${address_value.value}<br><b>Contact No.: </b>${mobile_value.value}<br><b>Email id: </b>${email_value.value}</p>
+    </div>
+    <div style="text-align:center;width:20%;float:right;">
+     <div style="border:none;height:120px;width:110px;">
+    <img src="${user_image_value}" height="118px;" width="108px">
+    </div>
+    </div>
+    </div>
+    <div style="border-top:2px dotted #111;clear:both">
+   <br>
+    <div style="border-bottom:2px solid #111;width: 100%;  margin-top: 0px;" class="head">
+    <span style="font-size:16px;font-weight:bold;">Career Objective</span>
+    </div>
+    <div style="width:100%;margin-top:2px;margin-bottom:5px;">
+    <p id='skr' style="margin-left:17px;text-indent:-17px">${career_objectiv_value}</p>
+    </div>
+    <div style="border-bottom:2px solid #111;width: 100%; " class="head">
+    <span style="font-size:16px;font-weight:bold;">Academic Qualification</span>
+    </div>
+    <div style="width:100%;margin-top:2px;"><table style="width: 100%;;border-collapse: collapse;border: 1px solid black;padding:10px;font-size:12px;">
+    <tbody><tr>
+    <td align="center" style="border: 1px solid black;"><b>Exam Name</b></td>
+    <td align="center" style="border: 1px solid black;"><b>Board / University</b></td>
+    <td align="center" style="border: 1px solid black;"><b>Passing year</b></td>
+    <td align="center" style="border: 1px solid black;"><b>Percentage of Marks</b></td>
+    <td align="center" style="border: 1px solid black;"><b>Division</b></td>
+    </tr>
+    ${academic_qualification_value.innerHTML}
+    </tbody></table>
+    </div>
+    <div style="border-bottom:2px solid #111;width: 100%;  margin-top: 4px;" class="head">
+    <span style="font-size:16px;font-weight:bold;">Professional Qualification</span>
+    </div>
+    <div style="width:100%;margin-top:5px;"><table style="width: 100%;; border-collapse: collapse;border: 1px solid black;padding:10px;font-size:12px;">
+    <tbody><tr>
+    <td align="center" style="border: 1px solid black;"><b>Exam Name</b></td>
+    <td align="center" style="border: 1px solid black;"><b>Board / University</b></td>
+    <td align="center" style="border: 1px solid black;"><b>Passing year</b></td>
+    <td align="center" style="border: 1px solid black;"><b>Percentage of Marks</b></td>
+    <td align="center" style="border: 1px solid black;"><b>Division</b></td>
+    </tr>
+    ${professional_qualification_value.innerHTML}
+    </tbody></table></div>
+   <div style="border-bottom:2px solid #111;width: 100%;  margin-top: 4px; margin-bottom: -4px;" class="head">
+        <span style="font-size:16px;font-weight:bold;">Extra Qualification</span>
+        </div>
+        <div style="width:100%;margin-top:2px;">
+        <p style="margin-top:7px;">${extra_qualification_value}</p>
+        </div>
+    <div style="border-bottom:2px solid #111;width: 100%;  margin-top: 4px; margin-bottom: -4px;" class="head">
+    <span style="font-size:16px;font-weight:bold;">Work Experience</span>
+    </div>
+    <div style="width:100%;margin-top:2px;">
+    <p style="margin-top:0px;">${work_experience_value.value}<br>
+    </p>
+    </div>
+    <div style="border-bottom:2px solid #111;width: 100%;  margin-top: 10px;" class="head">
+    <span style="font-size:16px;font-weight:bold;">Personal Information</span>
+    </div><br>
+    <div style="width:100%;">
+    <table style="margin-left:50px;width:500px;margin-top:0px;">
+    <tbody><tr>
+    <td style="width:150px">Date of Birth</td>
+    <td style="width:100px">:</td>
+    <td style="width:250px">${dob_value.value}</td>
+    </tr>
+    <tr>
+    <td style="width:150px">Father's Name</td>
+    <td style="width:100px">:</td>
+    <td style="width:250px">Mr. ${father_value.value}</td>
+    </tr>
+    <tr>
+    <td style="width:150px">Mother's Name</td>
+    <td style="width:100px">:</td>
+    <td style="width:250px">Mrs. ${mother_value.value}</td>
+    </tr>
+    <tr>
+    <td style="width:150px">Nationality</td>
+    <td style="width:100px">:</td>
+    <td style="width:250px">${nationality_value}</td>
+    </tr>
+    <tr>
+    <td style="width:150px">Gender</td>
+    <td style="width:100px">:</td>
+    <td style="width:250px">${gender_value}</td>
+    </tr>
+    <tr>
+    <td style="width:150px">Marital Status</td>
+    <td style="width:100px">:</td>
+    <td style="width:250px">${marritial_value}</td>
+    </tr>
+    <tr>
+    <td style="width:150px">Language</td>
+    <td style="width:100px">:</td>
+    <td style="width:250px">${language_value.value}</td>
+    </tr>
+    <tr>
+    <td style="width:150px">Hobbies</td>
+    <td style="width:100px">:</td>
+    <td style="width:250px">${hobbies_value.value}</td>
+    </tr>
+    </tbody></table>
+    </div>
+   
+    <br><div style="width: 100%; " class="head">
+      <span style="font-size:16px;font-weight:bold;"><u>Declaration:</u></span>
+      I hereby declare that all the statement made in this resume are true, complete and correct to the Knowledge.
+   
+      </div>
+    <div style="width:100%; margin-top:5px;margin-right: 10px;">
+    <p><span style="font-size:14px;font-weight:bold;"><i>Date:</i></span> <span style="font-size:14px;font-weight:bold;float:right;"><i>(${name_value.value})</i>
+    </span></p>
+    <p><span style="font-size:14px;font-weight:bold;"><i>Place:</i></span></p>
+    </div>
+    </div>
+    </div></div>
+             `;}
+             else if(professional_qualification_value.innerHTML.length > 15 && extra_qualification_value.length===0){
+             
+             final_created.innerHTML =`
+             <div style="padding-left:20px;" align='center'><div align='left'  style="padding:20px;width:650px;background-color:#fff;border:.5px solid #000000;margin-top:0px;" id="rdiv">
+    <div id="main" style="width:100%;padding:0px 20px 0px;">
+    <div style="text-align:center;width:100%;">
+    <span style="font-size:25px;font-weight:bold;"><u>${type_value}</u></span>
+    </div>
+    <div style="width:50%;float:left;">
+    <p><span style="font-size:16px;font-weight:bold">${name_value.value}</span><br><b>${address_value.value}<br><b>Contact No.: </b>${mobile_value.value}<br><b>Email id: </b>${email_value.value}</p>
+    </div>
+    <div style="text-align:center;width:20%;float:right;">
+     <div style="border:none;height:120px;width:110px;">
+    <img src="${user_image_value}" height="118px;" width="108px">
+    </div>
+    </div>
+    </div>
+    <div style="border-top:2px dotted #111;clear:both">
+   <br>
+    <div style="border-bottom:2px solid #111;width: 100%;  margin-top: 0px;" class="head">
+    <span style="font-size:16px;font-weight:bold;">Career Objective</span>
+    </div>
+    <div style="width:100%;margin-top:2px;margin-bottom:5px;">
+    <p id='skr' style="margin-left:17px;text-indent:-17px">${career_objectiv_value}</p>
+    </div>
+    <div style="border-bottom:2px solid #111;width: 100%; " class="head">
+    <span style="font-size:16px;font-weight:bold;">Academic Qualification</span>
+    </div>
+    <div style="width:100%;margin-top:2px;"><table style="width: 100%;;border-collapse: collapse;border: 1px solid black;padding:10px;font-size:12px;">
+    <tbody><tr>
+    <td align="center" style="border: 1px solid black;"><b>Exam Name</b></td>
+    <td align="center" style="border: 1px solid black;"><b>Board / University</b></td>
+    <td align="center" style="border: 1px solid black;"><b>Passing year</b></td>
+    <td align="center" style="border: 1px solid black;"><b>Percentage of Marks</b></td>
+    <td align="center" style="border: 1px solid black;"><b>Division</b></td>
+    </tr>
+    ${academic_qualification_value.innerHTML}
+    </tbody></table>
+    </div>
+   <div style="border-bottom:2px solid #111;width: 100%;  margin-top: 4px;" class="head">
+    <span style="font-size:16px;font-weight:bold;">Professional Qualification</span>
+    </div>
+    <div style="width:100%;margin-top:2px;"><table style="width: 100%;; border-collapse: collapse;border: 1px solid black;padding:10px;font-size:12px;">
+    <tbody><tr>
+    <td align="center" style="border: 1px solid black;"><b>Exam Name</b></td>
+    <td align="center" style="border: 1px solid black;"><b>Board / University</b></td>
+    <td align="center" style="border: 1px solid black;"><b>Passing year</b></td>
+    <td align="center" style="border: 1px solid black;"><b>Percentage of Marks</b></td>
+    <td align="center" style="border: 1px solid black;"><b>Division</b></td>
+    </tr>
+    ${professional_qualification_value.innerHTML}
+    </tbody></table></div>
+    <div style="border-bottom:2px solid #111;width: 100%;  margin-top: 4px; margin-bottom: -4px;" class="head">
+        <span style="font-size:16px;font-weight:bold;">Extra Qualification</span>
+        </div>
+        <div style="width:100%;margin-top:2px;">
+        <p style="margin-top:7px;">${extra_qualification_value}</p>
+        </div>
+    <div style="border-bottom:2px solid #111;width: 100%;  margin-top: 4px; margin-bottom: -4px;" class="head">
+    <span style="font-size:16px;font-weight:bold;">Work Experience</span>
+    </div>
+    <div style="width:100%;margin-top:2px;">
+    <p style="margin-top:0px;">${work_experience_value.value}<br>
+    </p>
+    </div>
+    <div style="border-bottom:2px solid #111;width: 100%;  margin-top: 10px;" class="head">
+    <span style="font-size:16px;font-weight:bold;">Personal Information</span>
+    </div><br>
+    <div style="width:100%;">
+    <table style="margin-left:50px;width:500px;margin-top:0px;">
+    <tbody><tr>
+    <td style="width:150px">Date of Birth</td>
+    <td style="width:100px">:</td>
+    <td style="width:250px">${dob_value.value}</td>
+    </tr>
+    <tr>
+    <td style="width:150px">Father's Name</td>
+    <td style="width:100px">:</td>
+    <td style="width:250px">Mr. ${father_value.value}</td>
+    </tr>
+    <tr>
+    <td style="width:150px">Mother's Name</td>
+    <td style="width:100px">:</td>
+    <td style="width:250px">Mrs. ${mother_value.value}</td>
+    </tr>
+    <tr>
+    <td style="width:150px">Nationality</td>
+    <td style="width:100px">:</td>
+    <td style="width:250px">${nationality_value}</td>
+    </tr>
+    <tr>
+    <td style="width:150px">Gender</td>
+    <td style="width:100px">:</td>
+    <td style="width:250px">${gender_value}</td>
+    </tr>
+    <tr>
+    <td style="width:150px">Marital Status</td>
+    <td style="width:100px">:</td>
+    <td style="width:250px">${marritial_value}</td>
+    </tr>
+    <tr>
+    <td style="width:150px">Language</td>
+    <td style="width:100px">:</td>
+    <td style="width:250px">${language_value.value}</td>
+    </tr>
+    <tr>
+    <td style="width:150px">Hobbies</td>
+    <td style="width:100px">:</td>
+    <td style="width:250px">${hobbies_value.value}</td>
+    </tr>
+    </tbody></table>
+    </div>
+   
+    <br><div style="width: 100%; " class="head">
+      <span style="font-size:16px;font-weight:bold;"><u>Declaration:</u></span>
+      I hereby declare that all the statement made in this resume are true, complete and correct to the Knowledge.
+   
+      </div>
+    <div style="width:100%; margin-top:5px;margin-right: 10px;">
+    <p><span style="font-size:14px;font-weight:bold;"><i>Date:</i></span> <span style="font-size:14px;font-weight:bold;float:right;"><i>(${name_value.value})</i>
+    </span></p>
+    <p><span style="font-size:14px;font-weight:bold;"><i>Place:</i></span></p>
+    </div>
+    </div>
+    </div></div>
+             `;}
+             else if(professional_qualification_value.innerHTML.length === 15 && extra_qualification_value.length>0){
+             
+             document.getElementById("data-entry-created").innerHTML =`
+             <div style="padding-left:20px;" align='center'><div align='left'  style="padding:20px;width:650px;background-color:#fff;border:.5px solid #000000;margin-top:0px;" id="rdiv">
+    <div id="main" style="width:100%;padding:0px 20px 0px;">
+    <div style="text-align:center;width:100%;">
+    <span style="font-size:25px;font-weight:bold;"><u>${type_value}</u></span>
+    </div>
+    <div style="width:50%;float:left;">
+    <p><span style="font-size:16px;font-weight:bold">${name_value.value}</span><br><b>${address_value.value}<br><b>Contact No.: </b>${mobile_value.value}<br><b>Email id: </b>${email_value.value}</p>
+    </div>
+    <div style="text-align:center;width:20%;float:right;">
+     <div style="border:none;height:120px;width:110px;">
+    <img src="${user_image_value}" height="118px;" width="108px">
+    </div>
+    </div>
+    </div>
+    <div style="border-top:2px dotted #111;clear:both">
+   <br>
+    <div style="border-bottom:2px solid #111;width: 100%;  margin-top: 0px;" class="head">
+    <span style="font-size:16px;font-weight:bold;">Career Objective</span>
+    </div>
+    <div style="width:100%;margin-top:2px;margin-bottom:5px;">
+    <p id='skr' style="margin-left:17px;text-indent:-17px">${career_objectiv_value}</p>
+    </div>
+    <div style="border-bottom:2px solid #111;width: 100%; " class="head">
+    <span style="font-size:16px;font-weight:bold;">Academic Qualification</span>
+    </div><br>
+    <div style="width:100%;margin-top:2px;"><table style="width: 100%;;border-collapse: collapse;border: 1px solid black;padding:10px;font-size:12px;">
+    <tbody><tr>
+    <td align="center" style="border: 1px solid black;"><b>Exam Name</b></td>
+    <td align="center" style="border: 1px solid black;"><b>Board / University</b></td>
+    <td align="center" style="border: 1px solid black;"><b>Passing year</b></td>
+    <td align="center" style="border: 1px solid black;"><b>Percentage of Marks</b></td>
+    <td align="center" style="border: 1px solid black;"><b>Division</b></td>
+    </tr>
+    ${academic_qualification_value.innerHTML}
+    </tbody></table>
+    </div>
+    <br><div style="border-bottom:2px solid #111;width: 100%;  margin-top: 4px;" class="head">
+    <span style="font-size:16px;font-weight:bold;">Professional Qualification</span>
+    </div><br>
+    <div style="width:100%;margin-top:2px;"><table style="width: 100%;; border-collapse: collapse;border: 1px solid black;padding:10px;font-size:12px;">
+    <tbody><tr>
+    <td align="center" style="border: 1px solid black;"><b>Exam Name</b></td>
+    <td align="center" style="border: 1px solid black;"><b>Board / University</b></td>
+    <td align="center" style="border: 1px solid black;"><b>Passing year</b></td>
+    <td align="center" style="border: 1px solid black;"><b>Percentage of Marks</b></td>
+    <td align="center" style="border: 1px solid black;"><b>Division</b></td>
+    </tr>
+    ${professional_qualification_value.innerHTML}
+    </tbody></table></div>
+    <br><div style="border-bottom:2px solid #111;width: 100%;  margin-top: 4px; margin-bottom: -4px;" class="head">
+        <span style="font-size:16px;font-weight:bold;">Extra Qualification</span>
+        </div>
+        <div style="width:100%;margin-top:2px;">
+        <p style="margin-top:7px;">${extra_qualification_value}</p>
+        </div>
+    <div style="border-bottom:2px solid #111;width: 100%;  margin-top: 4px; margin-bottom: -4px;" class="head">
+    <span style="font-size:16px;font-weight:bold;">Work Experience</span>
+    </div>
+    <div style="width:100%;margin-top:2px;">
+    <p style="margin-top:0px;">${work_experience_value.value}<br>
+    </p>
+    </div>
+    <div style="border-bottom:2px solid #111;width: 100%;  margin-top: 10px;" class="head">
+    <span style="font-size:16px;font-weight:bold;">Personal Information</span>
+    </div><br>
+    <div style="width:100%;">
+    <table style="margin-left:50px;width:500px;margin-top:0px;">
+    <tbody><tr>
+    <td style="width:150px">Date of Birth</td>
+    <td style="width:100px">:</td>
+    <td style="width:250px">${dob_value.value}</td>
+    </tr>
+    <tr>
+    <td style="width:150px">Father's Name</td>
+    <td style="width:100px">:</td>
+    <td style="width:250px">Mr. ${father_value.value}</td>
+    </tr>
+    <tr>
+    <td style="width:150px">Mother's Name</td>
+    <td style="width:100px">:</td>
+    <td style="width:250px">Mrs. ${mother_value.value}</td>
+    </tr>
+    <tr>
+    <td style="width:150px">Nationality</td>
+    <td style="width:100px">:</td>
+    <td style="width:250px">${nationality_value}</td>
+    </tr>
+    <tr>
+    <td style="width:150px">Gender</td>
+    <td style="width:100px">:</td>
+    <td style="width:250px">${gender_value}</td>
+    </tr>
+    <tr>
+    <td style="width:150px">Marital Status</td>
+    <td style="width:100px">:</td>
+    <td style="width:250px">${marritial_value}</td>
+    </tr>
+    <tr>
+    <td style="width:150px">Language</td>
+    <td style="width:100px">:</td>
+    <td style="width:250px">${language_value.value}</td>
+    </tr>
+    <tr>
+    <td style="width:150px">Hobbies</td>
+    <td style="width:100px">:</td>
+    <td style="width:250px">${hobbies_value.value}</td>
+    </tr>
+    </tbody></table>
+    </div>
+   
+    <br><div style="width: 100%; " class="head">
+      <span style="font-size:16px;font-weight:bold;"><u>Declaration:</u></span>
+      I hereby declare that all the statement made in this resume are true, complete and correct to the Knowledge.
+   
+      </div>
+    <div style="width:100%; margin-top:5px;margin-right: 10px;">
+    <p><span style="font-size:14px;font-weight:bold;"><i>Date:</i></span> <span style="font-size:14px;font-weight:bold;float:right;"><i>${name_value.value}</i>
+    </span></p>
+    <p><span style="font-size:14px;font-weight:bold;"><i>Place:</i></span></p>
+    </div>
+    </div>
+    </div></div>
+             `;}
+             }
+           
+             
+           
+            
+        function shprf(){
+        if(professional_qualification_value.innerHTML!=" "){
+        document.getElementById("prhd").style.display="none";
+        }}
+        
+             
+             </script>
+<script>
+         function createPDF() {
+            var element = document.getElementById('data-entry-created');
+            html2pdf(element, {
+                margin:1,
+                padding:1,
+                filename: 'Resume.pdf',
+                image: { type: 'jpeg', quality: 1 },
+                html2canvas: { scale: 4,  logging: true },
+                jsPDF: { unit: 'cm', format: 'A4', orientation: 'P' },
+                class: createPDF
+            });
+        };
+  var doc = new jsPDF;
+  //doc.rect(20, 20, doc.internal.pageSize.width - 40, doc.internal.pageSize.height - 40, 'S');
+        // function exportHTML(){
+        //     var header = "<html xmlns:o='urn:schemas-microsoft-com:office:office' "+
+        //             "xmlns:w='urn:schemas-microsoft-com:office:word' "+
+        //             "xmlns='http://www.w3.org/TR/REC-html40'>"+
+        //             "<head><meta charset='utf-8'><title>Export HTML to Word Document with JavaScript</title></head><body>";
+        //     var footer = "</body></html>";
+        //     var sourceHTML = header+document.getElementById("element-to-print").innerHTML+footer;
+            
+        //     var source = 'data:application/vnd.ms-word;charset=utf-8,' + encodeURIComponent(sourceHTML);
+        //     var fileDownload = document.createElement("a");
+        //     document.body.appendChild(fileDownload);
+        //     fileDownload.href = source;
+        //     fileDownload.download = 'document.doc';
+        //     fileDownload.click();
+        //     document.body.removeChild(fileDownload);
+        // }
+        
+    </script>
+    <script type="text/javascript">
+    var xtraq = document.getElementById("extraq_input");
+    var rs = document.getElementById("res");
+    var sdd = document.getElementById("addli");
+    function addli(){
+    if(xtraq.value.length!=0){
+      document.getElementById('invalidMsgextra').innerHTML = "";
+    rs.innerHTML += "<SPAN style='line-height:10px;display:block' class='taskt' >&nbsp;&nbsp;&#8226;&nbsp;&nbsp;" + xtraq.value + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span onclick='this.parentElement.remove()' class='removettt'>Delete</span></SPAN>";
+    xtraq.value="";
+    
+    }
+    else{
+      document.getElementById('invalidMsgextra').innerHTML = "Please Enter value first!";
+    } }
+    function togglesp(className, displayState){
+    var elementssp = document.getElementsByClassName(className);
+    
+    for (var ipq = 0; ipq < elementssp.length; ipq++){
+    elementssp[ipq].style.display = displayState;
+    } }
+    </script>
+
+</div>
+<div class='clear'></div>
+</div></div>
+</div>
+</article>
+</div></div>
+</div>
+<div class='col-lg-4 px-3 pb-5 separator-main position-relative ms-auto' content='itemid' id='sidebar' itemid='#sidebar' itemscope='itemscope' itemtype='https://schema.org/WPSideBar'>
+<div class='pt-4 section' id='sidebar-static'>
+<div class='widget HTML position-relative mb-4' data-version='2' id='HTML12'>
+<h2 class='widget-title position-relative fs-6 mb-3'><span>
+</span></h2>
+<div class='widget-content text-break1'><style>
+	#State, #Central {
+		text-align: Center;
+		padding: 5px;
+		width: 95%;
+		border-radius: 8px;
+		font-size: 20px ;
+		font-weight: 900;
+		text-shadow: 2px 3px 3px black;
+		border: 1px dashed black;
+	}
+
+		#State {  background: linear-gradient(to left, #ffff00 0%, #009933 100%);
+		color: white; }
+
+		#Central { background: linear-gradient(to left, #ffff00 0%, #ff3300 100%);
+		color: white; }
+
+  #State:hover {   background: linear-gradient(to left, #009933 0%, #ffff00 100%); }
+
+  #Central:hover { background: linear-gradient(to left, #ff3300 0%, #ffff00 100%);
+		color: white; }
+
+
+		a {text-decoration: none;}
+
+</style>
+    
+    
+  
+
+</body>
+    
+ <script>
+var allowed = [
+  "neelproject.infinityfreeapp.com",
+  "nkfilecompress.blogspot.com"
+];
+
+if (!allowed.includes(window.location.hostname)) {
+  document.body.innerHTML = "Access Denied";
+}
+    </script>   
+    
+</html>
