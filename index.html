@@ -23,6 +23,357 @@
 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
+
+
+
+
+
+
+<style type="text/css">
+/* ===== GLASS THEME (override) ===== */
+:root{
+  --primary:#2563eb;
+  --primary-2:#7c3aed;
+  --text:#0f172a;
+  --muted:#64748b;
+  --glass-bg:rgba(255,255,255,.38);
+  --glass-field:rgba(255,255,255,.55);
+  --glass-border:rgba(255,255,255,.7);
+  --radius:12px;
+}
+
+/* Colorful backdrop (glass ko blur karne ke liye background chahiye) */
+.form_wrapper,
+#preview-document-created{
+  font-family:'Inter',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+  color:var(--text);
+  background:
+    radial-gradient(circle at 12% 18%, rgba(99,102,241,.55), transparent 42%),
+    radial-gradient(circle at 88% 12%, rgba(236,72,153,.38), transparent 42%),
+    radial-gradient(circle at 75% 92%, rgba(14,165,233,.50), transparent 45%),
+    linear-gradient(135deg,#e0e7ff 0%,#fce7f3 50%,#dbeafe 100%);
+  border:none !important;
+  border-radius:26px;
+  padding:32px 20px;
+  margin:24px auto !important;
+}
+
+/* Main glass card */
+.form_wrapper .form_container{
+  background:var(--glass-bg);
+  -webkit-backdrop-filter:blur(18px) saturate(160%);
+  backdrop-filter:blur(18px) saturate(160%);
+  border:1px solid var(--glass-border);
+  border-radius:22px;
+  box-shadow:0 20px 50px rgba(31,38,135,.18), inset 0 1px 0 rgba(255,255,255,.8);
+  padding:28px;
+}
+
+/* Title */
+.form_wrapper h2#document-type{
+  font-size:28px;
+  font-weight:700;
+  letter-spacing:-.5px;
+  background:linear-gradient(135deg,var(--primary),var(--primary-2));
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+}
+.form_wrapper .title_container{
+  border-bottom:1px solid rgba(255,255,255,.7);
+  margin-bottom:10px;
+}
+
+/* Labels */
+.form_wrapper #label-heading{
+  display:block;
+  font-size:13px !important;
+  font-weight:600 !important;
+  color:#1e293b;
+  letter-spacing:.2px;
+  margin:16px 0 6px !important;
+}
+
+/* ===== Inputs / Textarea ===== */
+.form_wrapper .form_container :is(input[type=text],input[type=number],input[type=email],input[type=password],input[type=file],textarea[type=text]){
+  height:46px;
+  padding:0 14px 0 52px;
+  font:500 14px 'Inter',sans-serif;
+  color:var(--text);
+  background:var(--glass-field);
+  border:1px solid var(--glass-border);
+  border-radius:var(--radius);
+  box-shadow:inset 0 1px 2px rgba(15,23,42,.06);
+  transition:all .25s ease;
+}
+.form_wrapper .form_container textarea[type=text]{
+  padding:12px 14px 12px 52px;
+  resize:vertical;
+  font-family:'Inter',sans-serif;
+}
+.form_wrapper .form_container :is(input,textarea):hover{
+  background:rgba(255,255,255,.75);
+}
+.form_wrapper .form_container :is(input[type=text],input[type=number],input[type=email],input[type=file],textarea[type=text]):focus{
+  background:rgba(255,255,255,.95);
+  border-color:var(--primary);
+  box-shadow:0 0 0 4px rgba(37,99,235,.18);
+}
+.form_wrapper ::placeholder,
+textarea::placeholder{
+  color:#94a3b8;
+  font-size:14px;
+  background:transparent;
+}
+
+/* Icon box */
+.form_wrapper .input_field > span{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:42px;
+  height:100%;
+  color:var(--primary);
+  background:rgba(255,255,255,.45);
+  border-right:1px solid var(--glass-border);
+  border-radius:var(--radius) 0 0 var(--radius);
+  z-index:2;
+}
+.form_wrapper .input_field > span > i,
+.form_wrapper .textarea_field > span > i{padding-top:0;font-size:16px}
+.form_wrapper .input_field > span:has(+ textarea){align-items:flex-start;padding-top:14px;height:100%}
+
+/* ===== Select ===== */
+.form_wrapper .select_option select{
+  height:46px;
+  padding:0 40px 0 16px;
+  font:500 14px 'Inter',sans-serif;
+  color:var(--text);
+  background:var(--glass-field);
+  border:1px solid var(--glass-border);
+  border-radius:var(--radius);
+}
+.form_wrapper .select_option select:hover,
+.form_wrapper .select_option select:focus{
+  background:rgba(255,255,255,.9);
+  border-color:var(--primary);
+  box-shadow:0 0 0 4px rgba(37,99,235,.15);
+}
+.form_wrapper .select_arrow{
+  left:auto;
+  right:18px;
+  top:calc(50% - 3px);
+  border-top-color:var(--primary);
+}
+
+/* Career select (icon-style dropdown) */
+.form_wrapper .input_field > select.career-select{
+  position:absolute;
+  left:0; top:0;
+  width:46px;
+  height:100%;
+  padding:0;
+  color:transparent;
+  border:0 !important;
+  border-right:1px solid var(--glass-border) !important;
+  border-radius:var(--radius) 0 0 var(--radius);
+  background:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E") center/16px no-repeat,
+    linear-gradient(135deg,var(--primary),var(--primary-2));
+  z-index:3;
+}
+.career-select option{color:#111;background:#fff}
+#career_input{padding-left:62px !important}
+
+/* ===== Radio pills ===== */
+.form_wrapper .radio_option{display:flex;flex-wrap:wrap;gap:10px}
+.form_wrapper .radio_option label{
+  margin:0;
+  padding:8px 16px;
+  font-size:13px;
+  font-weight:500;
+  background:var(--glass-field);
+  border:1px solid var(--glass-border);
+  border-radius:999px;
+  cursor:pointer;
+  transition:all .2s;
+}
+.form_wrapper .radio_option label:hover{background:rgba(255,255,255,.85)}
+.form_wrapper .radio_option input:checked + label{
+  color:#fff;
+  background:linear-gradient(135deg,var(--primary),var(--primary-2));
+  border-color:transparent;
+  box-shadow:0 6px 16px rgba(37,99,235,.35);
+}
+.form_wrapper .radio_option label:before{display:none}
+
+/* ===== Tables (Academic / Professional) ===== */
+.form_wrapper #academic_container{
+  background:rgba(255,255,255,.3);
+  border:1px solid var(--glass-border);
+  border-radius:16px;
+  padding:10px;
+  scrollbar-width:thin;
+}
+.form_wrapper #academic_container table{
+  border-collapse:separate !important;
+  border-spacing:6px;
+  border:none !important;
+  width:800px;
+}
+.form_wrapper #academic_container table th{
+  padding:10px 6px;
+  font-size:12px;
+  font-weight:600;
+  text-transform:uppercase;
+  letter-spacing:.5px;
+  color:#fff;
+  background:linear-gradient(135deg,var(--primary),var(--primary-2));
+  border:none !important;
+  border-radius:8px;
+}
+.form_wrapper #academic_container table th[style*="border:none"]{background:transparent;}
+.form_wrapper #academic_container table td{
+  border:none !important;
+  padding:0 !important;
+}
+.form_wrapper #academic_container table td input{
+  height:40px;
+  padding:0 10px !important;
+  border-radius:8px;
+  font-size:13px;
+}
+.form_wrapper #acmdtl td,
+.form_wrapper #prfdtl td{
+  padding:8px !important;
+  font-size:13px;
+  background:rgba(255,255,255,.55);
+  border:1px solid var(--glass-border) !important;
+  border-radius:8px;
+}
+
+/* ===== Buttons ===== */
+.form_wrapper button,
+.dnbcbtn button{
+  font-family:'Inter',sans-serif;
+  font-weight:600;
+  font-size:13px;
+  color:#fff;
+  background:linear-gradient(135deg,var(--primary),var(--primary-2));
+  border:none;
+  border-radius:10px;
+  padding:9px 18px;
+  cursor:pointer;
+  box-shadow:0 6px 16px rgba(37,99,235,.28);
+  transition:transform .2s, box-shadow .2s, filter .2s;
+}
+.form_wrapper button:hover,
+.dnbcbtn button:hover{
+  transform:translateY(-2px);
+  box-shadow:0 10px 22px rgba(37,99,235,.38);
+  filter:brightness(1.06);
+}
+.form_wrapper button:active,
+.dnbcbtn button:active{transform:translateY(1px)}
+
+.form_wrapper #academic_container table td button{height:40px !important;width:100%;padding:0 12px !important}
+.form_wrapper .btnDelete{background:linear-gradient(135deg,#ef4444,#dc2626);box-shadow:0 4px 10px rgba(239,68,68,.3)}
+.form_wrapper .addli{margin-top:6px}
+
+/* Generate button */
+.form_wrapper .form_container input[type=submit]{
+  height:52px;
+  margin-top:10px;
+  font:600 16px 'Inter',sans-serif;
+  letter-spacing:.3px;
+  border-radius:14px;
+  background:linear-gradient(135deg,var(--primary),var(--primary-2));
+  box-shadow:0 12px 28px rgba(37,99,235,.38);
+  transition:transform .2s, box-shadow .2s;
+}
+.form_wrapper .form_container input[type=submit]:hover,
+.form_wrapper .form_container input[type=submit]:focus{
+  background:linear-gradient(135deg,#1d4ed8,#6d28d9);
+  transform:translateY(-2px);
+  box-shadow:0 16px 34px rgba(37,99,235,.48);
+}
+
+/* Extra qualification chips */
+.taskst .taskt{
+  display:flex !important;
+  line-height:1.4 !important;
+  padding:8px 14px !important;
+  font-size:13px;
+  background:rgba(255,255,255,.6) !important;
+  border:1px solid var(--glass-border) !important;
+  border-radius:10px !important;
+  box-shadow:0 4px 10px rgba(15,23,42,.06);
+  width:100%;
+}
+.removettt{
+  font-size:11px !important;
+  padding:3px 10px !important;
+  border-radius:999px !important;
+  background:linear-gradient(135deg,#ef4444,#dc2626) !important;
+}
+
+/* Photo preview */
+#userimg_input{
+  width:140px;
+  height:170px;
+  padding:6px !important;
+  background:rgba(255,255,255,.5) !important;
+  border:2px dashed rgba(37,99,235,.45) !important;
+  border-radius:14px;
+  box-shadow:0 8px 20px rgba(15,23,42,.1);
+}
+#userimg_input img{border-radius:10px}
+
+/* Error text */
+#invalidMsg,#invalidMsgp,#invalidMsgextra{font-size:12px;font-weight:500;color:#dc2626}
+
+/* ===== Preview page ===== */
+.dnbcbtn{
+  background:rgba(255,255,255,.4) !important;
+  -webkit-backdrop-filter:blur(16px);
+  backdrop-filter:blur(16px);
+  border:1px solid var(--glass-border);
+  border-radius:16px !important;
+  box-shadow:0 10px 30px rgba(31,38,135,.15) !important;
+}
+#rdiv{
+  box-shadow:0 20px 50px rgba(31,38,135,.25);
+  border-radius:6px;
+  /* Resume white hi rahega, PDF/print ke liye */
+}
+
+/* Fallback agar browser blur support na kare */
+@supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){
+  .form_wrapper .form_container{background:rgba(255,255,255,.85)}
+}
+
+/* Mobile */
+@media (max-width:600px){
+  .form_wrapper,#preview-document-created{padding:14px 8px;border-radius:18px}
+  .form_wrapper .form_container{padding:16px}
+  .form_wrapper h2#document-type{font-size:22px}
+}
+
+/* Print: sirf resume dikhe */
+@media print{
+  .form_wrapper,#preview-document-created{background:none !important;padding:0 !important;margin:0 !important}
+  #rdiv{box-shadow:none}
+}
+</style>
+
+
+
+
+
+
+
+	
+
 <style type="text/css">
 textarea::placeholder {
   
